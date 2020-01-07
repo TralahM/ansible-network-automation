@@ -1,0 +1,17 @@
+---
+- hosts: all
+  tasks:
+      - name: make me known to all servers
+        authorized_key:
+            user: root
+            state: present
+            key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+      - name: Add the user african with sudo group
+        user:
+            name: african
+            comment: African Doctor
+            group: sudo
+            generate_ssh_key: yes
+            ssh_key_file: .ssh/id_rsa
+            state: present
+            shell: /bin/bash
