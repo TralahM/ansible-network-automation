@@ -38,7 +38,7 @@ def run():
     mfiles(Root_Files)
     mfiles(prodstag_files)
     mfiles(var_files)
-    mdirs(Subroles_Files)
+    mfiles(Subroles_Files)
     print("Done!")
 
 
