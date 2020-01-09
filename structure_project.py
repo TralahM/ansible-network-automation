@@ -14,6 +14,8 @@ prodstag_files = [d+"/hosts" for d in ["production", "staging"]]
 var_files = [r+"/"+f for f in ["all.yml", "staging.yml", "production.yml"] for r in
              ["group_vars", "host_vars"]]
 
+Subroles_Files = [r+"/main.yml" for r in Subroles_Dirs]
+
 
 def mdirs(Dirs):
     for d in Dirs:
@@ -36,6 +38,7 @@ def run():
     mfiles(Root_Files)
     mfiles(prodstag_files)
     mfiles(var_files)
+    mdirs(Subroles_Files)
     print("Done!")
 
 
