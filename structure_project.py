@@ -40,7 +40,7 @@ def run():
     mfiles(var_files)
     mfiles(Subroles_Files)
     print("Done!")
-    os.system("ls")
+    os.system("ls --color=auto")
 
 
 if __name__ == '__main__':
