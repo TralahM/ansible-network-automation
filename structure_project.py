@@ -19,14 +19,14 @@ Subroles_Files = [r+"/main.yml" for r in Subroles_Dirs]
 
 def mdirs(Dirs):
     for d in Dirs:
-        print(d)
+        # print(d)
         if not os.path.exists(d):
             os.makedirs(d)
 
 
 def mfiles(Files):
     for f in Files:
-        print(f)
+        # print(f)
         os.system(f"touch {f}")
 
 
@@ -40,6 +40,7 @@ def run():
     mfiles(var_files)
     mfiles(Subroles_Files)
     print("Done!")
+    os.system("ls")
 
 
 if __name__ == '__main__':
